@@ -1,0 +1,5 @@
+USERID01=Administrator
+PASSWD01=adminpassword
+
+USERID02=user01
+PASSWD02=userpassword

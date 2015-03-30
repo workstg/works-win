@@ -1,0 +1,155 @@
+CLASS USER
+
+CATEGORY !!SSOperations
+
+   KEYNAME "Software\GrimAdmin.com\Screensaver Operations"
+
+   POLICY !!LocalMachineOverride
+      EXPLAIN !!LocalMachineOverrideExplain
+      VALUENAME "LocalMachineOverride"
+         VALUEON NUMERIC 1
+         VALUEOFF NUMERIC 0
+   END POLICY
+
+   POLICY !!EWX_ExitFlag
+      EXPLAIN !!EWX_ExitFlagExplain
+      PART !!EWX_ExitFlagPart DROPDOWNLIST
+         VALUENAME "EWX_ExitFlag"
+         ITEMLIST
+            NAME "Log Off" VALUE 0
+            NAME "Log Off (Force)" VALUE 4
+            NAME "Shutdown" VALUE 1
+            NAME "Shutdown (Force)" VALUE 5
+            NAME "Reboot" VALUE 2
+            NAME "Reboot (Force)" VALUE 6
+            NAME "Power Off" VALUE 8
+            NAME "Power Off (Force)" VALUE 12
+            NAME "Suspend" VALUE 90
+            NAME "Suspend (Force)" VALUE 91
+            NAME "Hibernate" VALUE 94
+            NAME "Hibernate (Force)" VALUE 95
+            NAME "Does Nothing (for Test)" VALUE 99
+         END ITEMLIST
+      END PART
+   END POLICY
+
+   POLICY !!CancelOnMouseClick
+      EXPLAIN !!CancelOnMouseClickExplain
+      VALUENAME "CancelOnMouseClick"
+         VALUEON NUMERIC 1
+         VALUEOFF NUMERIC 0
+   END POLICY
+
+   POLICY !!CancelOnMouseMove
+      EXPLAIN !!CancelOnMouseMoveExplain
+      VALUENAME "CancelOnMouseMove"
+         VALUEON NUMERIC 1
+         VALUEOFF NUMERIC 0
+   END POLICY
+
+   POLICY !!DelayInSeconds
+      EXPLAIN !!DelayInSecondsExplain
+      PART !!DelayInSecondsPart NUMERIC
+         VALUENAME "DelayInSeconds"
+         DEFAULT 60
+      END PART
+   END POLICY
+
+   POLICY !!DisableSpecialKeys
+      EXPLAIN !!DisableSpecialKeysExplain
+      VALUENAME "DisableSpecialKeys"
+         VALUEON NUMERIC 1
+         VALUEOFF NUMERIC 0
+   END POLICY
+
+   POLICY !!HideActionButton
+      EXPLAIN !!HideActionButtonExplain
+      VALUENAME "HideActionButton"
+         VALUEON NUMERIC 1
+         VALUEOFF NUMERIC 0
+   END POLICY
+
+   POLICY !!RunProcessEnabled
+      EXPLAIN !!RunProcessEnabledExplain
+      VALUENAME "RunProcessEnabled"
+         VALUEON NUMERIC 1
+         VALUEOFF NUMERIC 0
+   END POLICY
+
+   POLICY !!RunProcessPath
+      EXPLAIN !!RunProcessPathExplain
+      PART !!RunProcessPathPart EDITTEXT
+         VALUENAME "RunProcessPath"
+      END PART
+      PART !!RunProcessArgumentsPart EDITTEXT
+         VALUENAME "RunProcessArguments"
+      END PART
+   END POLICY
+
+   POLICY !!MessageFontSize
+      EXPLAIN !!MessageFontSizeExplain
+      PART !!MessageFontSizePart NUMERIC
+         VALUENAME "MessageFontSize"
+         DEFAULT 9
+      END PART
+   END POLICY
+
+   POLICY !!CustomTitleText
+      EXPLAIN !!CustomTitleTextExplain
+      PART !!CustomTitleTextPart EDITTEXT
+         VALUENAME "CustomTitleText"
+      END PART
+      PART !!CustomMessagePart EDITTEXT
+         VALUENAME "CustomMessage"
+      END PART
+   END POLICY
+
+   POLICY !!GradientColor
+      EXPLAIN !!GradientColorExplain
+      PART !!GradientColorLeftPart EDITTEXT
+         VALUENAME "GradientColorLeft"
+         DEFAULT "#054E85"
+      END PART
+      PART !!GradientColorRightPart EDITTEXT
+         VALUENAME "GradientColorRight"
+         DEFAULT "#287182"
+      END PART
+   END POLICY
+
+END CATEGORY
+
+[Strings]
+SSOperations="Screensaver Operations"
+LocalMachineOverride="LocalMachineOverride"
+LocalMachineOverrideExplain="Description: Causes MACHINE settings (HKLM) to take precedence over USER settings (HKCU).\nFormat: integer (0=disabled; 1=enabled; default=0)\nNOTE: Applies to MACHINE registry (HKLM) only."
+EWX_ExitFlag="EWX_ExitFlag"
+EWX_ExitFlagExplain="Description: Sets the Windows Exit command.\nFormat: integer (default=0)\nPossible Values:\n0  - (0x0) Log Off\n4  - (0x4) Forced Log Off (0 + 4)\n1  - (0x1) Shutdown\n5  - (0x5) Forced Shutdown (1 + 4)\n2  - (0x2) Reboot\n6  - (0x6) Forced Reboot (2 + 4)\n8  - (0x8) Power Off\n12 - (0xC) Forced Power Off (8 + 4)\n90 - Suspend\n91 - Hibernate\n94 - Forced Suspend\n95 - Forced Hibernate\n99 - Does Nothing (used for testing)"
+EWX_ExitFlagPart="EWX_ExitFlag"
+CancelOnMouseClick="CancelOnMouseClick"
+CancelOnMouseClickExplain="Description: Enables the ability to cancel the screensaver when a mouse button is clicked.\nFormat: integer (0=disabled; 1=enabled; default=0)\nNOTE: Experimental setting - can only be set via registry and ADMX (setting not available in the configuration GUI)."
+CancelOnMouseMove="CancelOnMouseMove"
+CancelOnMouseMoveExplain="Description: Enables the ability to cancel the screensaver when the mouse is moved.\nFormat: integer (0=disabled; 1=enabled; default=0)\nNOTE: Experimental setting - can only be set via registry and ADMX (setting not available in the configuration GUI)."
+DelayInSeconds="DelayInSeconds"
+DelayInSecondsExplain="Description: How long to display warning message before performing specified action. Setting to 0 will cause action to occur immediately.\nFormat: integer between 0 and 2,147,483,647 (default=60)"
+DelayInSecondsPart="DelayInSeconds"
+DisableSpecialKeys="DisableSpecialKeys"
+DisableSpecialKeysExplain="Description: Disables special keys and key combinations such as the Windows key, Alt+Tab, Alt+Esc, Ctrl+Esc, Ctrl+Shift+Esc. Does not disable Ctrl+Alt+Del or Alt+F4.\nFormat: integer (0=disabled; 1=enabled; default=1)"
+HideActionButton="HideActionButton"
+HideActionButtonExplain="Description: Removes the Action Button from the screensaver dialog window.\nFormat: integer (0=disabled; 1=enabled; default=0)"
+RunProcessEnabled="RunProcessEnabled"
+RunProcessEnabledExplain="Description: Causes screensaver to ignore the EWX_ExitFlag value and run a specified process instead.\nFormat: integer (0=disabled; 1=enabled; default=0)"
+RunProcessPath="RunProcessPath"
+RunProcessPathExplain="* RunProcessPath\nDescription: Path to executable; used in conjunction with RunProcessEnabled.\nFormat: string (e.g., "C:\Windows\System32\TsDiscon.exe")\n\n* RunProcessArguments\nDescription: Arguments to pass to executable; used in conjunction with RunProcessEnabled.\nFormat: string (e.g., "/s /p")"
+RunProcessPathPart="RunProcessPath"
+RunProcessArgumentsPart="RunProcessArguments"
+MessageFontSize="MessageFontSize"
+MessageFontSizeExplain="Description: Sets font size of message text.\nFormat: integer between 1 and 1,638 (default=9)"
+MessageFontSizePart="MessageFontSize"
+CustomTitleText="CustomTitleText"
+CustomTitleTextExplain="* CustomTitleText\nDescription: Allows you to display a custom text in the title rather than one of the default titles.\nFormat: string (e.g., "Windows is now logging off")\nNOTE: Setting CustomTitleText to "" will cause one of the default titles to appear. If you want no text to appear, enter a space " ".\n\n* CustomMessage\nDescription: Allows you to display a custom message rather than one of the default messages.\nFormat: string (e.g., "Your computer is about to shutdown!")\nNOTE: Setting CustomMessage to "" will cause one of the default messages to appear. If you want no text to appear, enter a space " ".\nOptional Variables:\n%time_remaining% - Displays the time remaining in seconds (e.g., "Your computer will shutdown in %time_remaining% seconds.").\n%time_remaining_h% - Displays the hours component of the time remaining in H:M:S format.\n%time_remaining_m% - Displays the minutes component of the time remaining in H:M:S format.\n%time_remaining_s% - Displays the seconds component of the time remaining in H:M:S format.\n%time_remaining_hp% - Displays the hours component of the time remaining in two-digit padded HH:MM:SS format.\n%time_remaining_mp% - Displays the minutes component of the time remaining in two-digit padded HH:MM:SS format.\n%time_remaining_sp% - Displays the seconds component of the time remaining in two-digit padded HH:MM:SS format.\n%time_elapsed% - Displays the time elapsed in seconds.\n%time_elapsed_h% - Displays the hours component of the time elapsed in H:M:S format.\n%time_elapsed_m% - Displays the minutes component of the time elapsed in H:M:S format.\n%time_elapsed_s% - Displays the seconds component of the time elapsed in H:M:S format.\n%time_elapsed_hp% - Displays the hours component of the time elapsed in two-digit padded HH:MM:SS format.\n%time_elapsed_mp% - Displays the minutes component of the time elapsed in two-digit padded HH:MM:SS format.\n%time_elapsed_sp% - Displays the seconds component of the time elapsed in two-digit padded HH:MM:SS format.\n%user_name% -> Shows the currently logged on user's username.\n%user_domain_name% -> Shows the current user's domain name.\n%machine_name% - Shows the current computer name."
+CustomTitleTextPart="CustomTitleText"
+CustomMessagePart="CustomMessage" 
+GradientColor="GradientColor"
+GradientColorExplain="Description: Allows you to customize the background colors of the banner text. Setting both values the same will cause a solid color while having different colors will cause a color gradient.\nFormat: hex triplet (e.g., "#054E85")\nNOTE: Make sure you include the preceding pound "#" symbol."
+GradientColorLeftPart="GradientColorLeft"
+GradientColorRightPart="GradientColorRight"
