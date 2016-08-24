@@ -41,7 +41,7 @@ if ($ExportFlag) {
          } elseif ($_.Protocols.Udp) {
             $Protocols = "UDP"
          } elseif ($_.Protocols.Icmp) {
-            $Protocols = ICMP
+            $Protocols = "ICMP"
          } else {
             $Protocols = "Any"
          }
