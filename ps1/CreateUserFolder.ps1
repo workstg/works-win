@@ -7,7 +7,7 @@ $TargetGroup = "Domain Users"
 $RootFolder = "\\127.0.0.1\Shared"
 
 # Main Routine
-$GroupUsers = Get-ADGroupMember -Identity $TargetGroup
+$GroupUsers = Get-ADGroupMember -Identity $TargetGroup -Recursive
 $Folders = Get-ChildItem -Path $RootFolder
 
 foreach ($DomainUser in $GroupUsers) {
