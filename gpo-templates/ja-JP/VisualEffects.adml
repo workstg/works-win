@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                           xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinition" 
+                           revision="1.0" schemaVersion="1.0">
+  <displayName >ここに表示名を入力</displayName>
+  <description >ADMX ファイルの説明を入力</description>
+  <resources>
+    <stringTable>
+      <string id="String_Cat_VisualEffects">Windows 視覚効果</string>
+      <string id="String_Pref_Perf">視覚効果をパフォーマンス優先にする</string>
+      <string id="String_Pref_Perf_Help">「システムの詳細設定」で視覚効果を「パフォーマンス優先にする」に変更します。
+元に戻す場合はこのカテゴリーの項目を全て「未構成」に設定し、各ユーザーで視覚効果を設定してください。</string>
+      <string id="String_UserPreferencesMask">デスクトップの視覚効果を無効</string>
+      <string id="String_UserPreferencesMask_Help">以下の視覚効果を無効にします。
+
+「Windows内のアニメーションコントロールと要素」
+「ウィンドウの下に影を表示する」★
+「コンボボックスをスライドして開く」
+「ヒントをフェードまたはスライドで表示する」
+「マウスポインターの下に影を表示する」※
+「メニューをフェードまたはスライドして表示する」
+「メニュー項目をクリック後にフェードアウトする」
+「リストボックスを滑らかにスクロールする」</string>
+      <string id="String_UserPreferencesMask_1">全て無効</string>
+      <string id="String_UserPreferencesMask_2">※のみ有効</string>
+      <string id="String_UserPreferencesMask_3">★のみ有効</string>
+      <string id="String_FontSmoothing">フォントスムージングを無効化</string>
+      <string id="String_FontSmoothing_Help">「スクリーンフォントの縁を滑らかにする」を無効にします。</string>
+      <string id="String_DragFullWindows">ドラッグウインドウ表示を無効化</string>
+      <string id="String_DragFullWindows_Help">「ドラッグ中にウィンドウの内容を表示する」を無効にします。</string>
+      <string id="String_MinAnimate">ウインドウアニメーションを無効化</string>
+      <string id="String_MinAnimate_Help">「ウィンドウを最大化や最小化するときにアニメーションで表示する」を無効にします。</string>
+      <string id="String_IconsOnly">サムネイル表示を無効化</string>
+      <string id="String_IconsOnly_Help">「アイコンの代わりに縮小版を表示する」を無効にします。</string>
+      <string id="String_TaskbarAnimations">タスクバーアニメーションの無効化</string>
+      <string id="String_TaskbarAnimations_Help">「タスクバーとスタートメニューでアニメーションを表示する」を無効にします。</string>
+      <string id="String_ListviewShadow">アイコン名の影を無効化</string>
+      <string id="String_ListviewShadow_Help">「デスクトップのアイコン名に影を付ける」を無効にします。</string>
+      <string id="String_ListviewAlphaSelect">半透明の選択ツールをを無効化</string>
+      <string id="String_ListviewAlphaSelect_Help">「半透明の［選択］ツールを表示する」を無効にします。</string>
+      <string id="String_ThemeActive">ウインドウとボタンの視覚スタイルをを無効化</string>
+      <string id="String_ThemeActive_Help">「ウィンドウとボタンに視覚スタイルを使用する」を無効にします。
+(Windows 10 では非サポート)</string>
+      <string id="String_EnableAeroPeek">プレビューを無効化</string>
+      <string id="String_EnableAeroPeek_Help">「Aeroプレビューを有効にする」を無効にします。</string>
+      <string id="String_AlwaysHibernateThumbnails">タスクバーのプレビューを無効化</string>
+      <string id="String_AlwaysHibernateThumbnails_Help">「タスクバーの縮小版のプレビューを保存する」を無効にします。</string>
+      <string id="String_CompositionPolicy">デスクトップコンポジションを無効化</string>
+      <string id="String_CompositionPolicy_Help">「デスクトップコンポジションを有効にする」を無効にします。
+(Windows 10 では非サポート)</string>
+      <string id="String_ColorizationOpaqueBlend">透明感を無効化</string>
+      <string id="String_ColorizationOpaqueBlend_Help">「透明感を有効にする」を無効にします。
+(Windows 10 では非サポート)</string>
+    </stringTable>
+
+    <presentationTable>
+      <presentation id="Presentation_UserPreferencesMask_List">
+        <dropdownList refId="Presentation_UserPreferencesMask_List_Item" defaultItem="1" noSort="true">設定値:</dropdownList>
+      </presentation>
+    </presentationTable>
+
+  </resources>
+</policyDefinitionResources>
