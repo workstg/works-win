@@ -8,9 +8,13 @@
   <resources>
     <stringTable>
       <string id="String_Cat_VisualEffects">Windows 視覚効果</string>
-      <string id="String_Pref_Perf">視覚効果をパフォーマンス優先にする</string>
-      <string id="String_Pref_Perf_Help">「システムの詳細設定」で視覚効果を「パフォーマンス優先にする」に変更します。
+      <string id="String_Pref_Perf">視覚効果を設定する</string>
+      <string id="String_Pref_Perf_Help">「システムの詳細設定」で視覚効果を設定します。ただし、実際に反映するには詳細項目の設定が必要です。
 元に戻す場合はこのカテゴリーの項目を全て「未構成」に設定し、各ユーザーで視覚効果を設定してください。</string>
+      <string id="String_Pref_Perf_0">最適なものを自動的に選択する</string>
+      <string id="String_Pref_Perf_1">デザインを優先する</string>
+      <string id="String_Pref_Perf_2">パフォーマンスを優先する</string>
+      <string id="String_Pref_Perf_3">カスタム</string>
       <string id="String_UserPreferencesMask">デスクトップの視覚効果を無効</string>
       <string id="String_UserPreferencesMask_Help">以下の視覚効果を無効にします。
 
@@ -22,9 +26,9 @@
 「メニューをフェードまたはスライドして表示する」
 「メニュー項目をクリック後にフェードアウトする」
 「リストボックスを滑らかにスクロールする」</string>
-      <string id="String_UserPreferencesMask_1">全て無効</string>
-      <string id="String_UserPreferencesMask_2">※のみ有効</string>
-      <string id="String_UserPreferencesMask_3">★のみ有効</string>
+      <string id="String_UserPreferencesMask_0">全て無効</string>
+      <string id="String_UserPreferencesMask_1">※のみ有効</string>
+      <string id="String_UserPreferencesMask_2">★のみ有効</string>
       <string id="String_FontSmoothing">フォントスムージングを無効化</string>
       <string id="String_FontSmoothing_Help">「スクリーンフォントの縁を滑らかにする」を無効にします。</string>
       <string id="String_DragFullWindows">ドラッグウインドウ表示を無効化</string>
@@ -37,9 +41,9 @@
       <string id="String_TaskbarAnimations_Help">「タスクバーとスタートメニューでアニメーションを表示する」を無効にします。</string>
       <string id="String_ListviewShadow">アイコン名の影を無効化</string>
       <string id="String_ListviewShadow_Help">「デスクトップのアイコン名に影を付ける」を無効にします。</string>
-      <string id="String_ListviewAlphaSelect">半透明の選択ツールをを無効化</string>
+      <string id="String_ListviewAlphaSelect">半透明の選択ツールを無効化</string>
       <string id="String_ListviewAlphaSelect_Help">「半透明の［選択］ツールを表示する」を無効にします。</string>
-      <string id="String_ThemeActive">ウインドウとボタンの視覚スタイルをを無効化</string>
+      <string id="String_ThemeActive">ウインドウとボタンの視覚スタイルを無効化</string>
       <string id="String_ThemeActive_Help">「ウィンドウとボタンに視覚スタイルを使用する」を無効にします。
 (Windows 10 では非サポート)</string>
       <string id="String_EnableAeroPeek">プレビューを無効化</string>
@@ -56,7 +60,10 @@
 
     <presentationTable>
       <presentation id="Presentation_UserPreferencesMask_List">
-        <dropdownList refId="Presentation_UserPreferencesMask_List_Item" defaultItem="1" noSort="true">設定値:</dropdownList>
+        <dropdownList refId="Presentation_UserPreferencesMask_List_Item" defaultItem="0" noSort="true">設定値:</dropdownList>
+      </presentation>
+      <presentation id="Presentation_Pref_Perf_List">
+        <dropdownList refId="Presentation_Pref_Perf_List_Item" defaultItem="0" noSort="true">設定値:</dropdownList>
       </presentation>
     </presentationTable>
 

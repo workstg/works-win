@@ -16,15 +16,33 @@
 
   <policies>
     <policy name="String_Pref_Perf" class="User" displayName="$(string.String_Pref_Perf)" explainText="$(string.String_Pref_Perf_Help)" 
-            key="Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" valueName="VisualFXSetting">
+            presentation="$(presentation.Presentation_Pref_Perf_List)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects">
       <parentCategory ref="String_Cat_VisualEffects" />
       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
-      <enabledValue>
-        <decimal value="2" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
+      <elements>
+        <enum id="Presentation_Pref_Perf_List_Item" valueName="VisualFXSetting" required="true">
+          <item displayName="$(string.String_Pref_Perf_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.String_Pref_Perf_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.String_Pref_Perf_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.String_Pref_Perf_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+        </enum>
+      </elements>
     </policy>
 
     <policy name="String_UserPreferencesMask" class="User" displayName="$(string.String_UserPreferencesMask)" explainText="$(string.String_UserPreferencesMask_Help)" 
@@ -33,22 +51,21 @@
       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
       <elements>
         <enum id="Presentation_UserPreferencesMask_List_Item" valueName="UserPreferencesMask" required="true">
+          <item displayName="$(string.String_UserPreferencesMask_0)">
+            <value>
+              <longDecimal value="70867030672" />
+            </value>
+          </item>
           <item displayName="$(string.String_UserPreferencesMask_1)">
             <value>
-              <longDecimal value="9012018010" />
+              <longDecimal value="70867169936" />
             </value>
           </item>
           <item displayName="$(string.String_UserPreferencesMask_2)">
             <value>
-              <longDecimal value="9032038010" />
+              <longDecimal value="70867423888" />
             </value>
           </item>
-          <item displayName="$(string.String_UserPreferencesMask_3)">
-            <value>
-              <longDecimal value="9012058010" />
-            </value>
-          </item>
-
         </enum>
       </elements>
     </policy>
@@ -58,10 +75,10 @@
       <parentCategory ref="String_Cat_VisualEffects" />
       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
       <enabledValue>
-        <decimal value="0" />
+        <string>0</string>
       </enabledValue>
       <disabledValue>
-        <decimal value="2" />
+        <string>2</string>
       </disabledValue>
     </policy>
 
@@ -70,10 +87,10 @@
       <parentCategory ref="String_Cat_VisualEffects" />
       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
       <enabledValue>
-        <decimal value="0" />
+        <string>0</string>
       </enabledValue>
       <disabledValue>
-        <decimal value="1" />
+        <string>1</string>
       </disabledValue>
     </policy>
 
@@ -82,10 +99,10 @@
       <parentCategory ref="String_Cat_VisualEffects" />
       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
       <enabledValue>
-        <decimal value="0" />
+        <string>0</string>
       </enabledValue>
       <disabledValue>
-        <decimal value="1" />
+        <string>1</string>
       </disabledValue>
     </policy>
 
@@ -142,10 +159,10 @@
       <parentCategory ref="String_Cat_VisualEffects" />
       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
       <enabledValue>
-        <decimal value="0" />
+        <string>0</string>
       </enabledValue>
       <disabledValue>
-        <decimal value="1" />
+        <string>1</string>
       </disabledValue>
     </policy>
 
