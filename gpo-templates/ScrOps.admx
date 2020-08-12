@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinition"
+                   revision="1.1" schemaVersion="1.0" >
+
+  <policyNamespaces>
+    <target prefix="ScreensaverOperations" namespace="GrimAdmin.Policies.ScreensaverOperations" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+
+  <categories>
+    <category name="String_Cat_ScrOps" displayName="$(string.String_Cat_ScrOps)" explainText="$(string.String_Cat_ScrOps)" />
+  </categories>
+
+  <policies>
+    <policy name="String_LocalMachineOverride" class="Machine" displayName="$(string.String_LocalMachineOverride)" explainText="$(string.String_LocalMachineOverride_Help)" 
+            key="SOFTWARE\GrimAdmin.com\Screensaver Operations" valueName="LocalMachineOverride">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+
+    <policy name="String_EWX_ExitFlag" class="Both" displayName="$(string.String_EWX_ExitFlag)" explainText="$(string.String_EWX_ExitFlag_Help)" 
+            presentation="$(presentation.Presentation_EWX_ExitFlag_List)" key="SOFTWARE\GrimAdmin.com\Screensaver Operations">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="Presentation_EWX_ExitFlag_List_Item" valueName="EWX_ExitFlag" required="true">
+          <item displayName="$(string.String_EWX_ExitFlag_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EWX_ExitFlag_1)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EWX_ExitFlag_2)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EWX_ExitFlag_3)">
+            <value>
+              <decimal value="5" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EWX_ExitFlag_4)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EWX_ExitFlag_5)">
+            <value>
+              <decimal value="6" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EWX_ExitFlag_6)">
+            <value>
+              <decimal value="8" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EWX_ExitFlag_7)">
+            <value>
+              <decimal value="12" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EWX_ExitFlag_8)">
+            <value>
+              <decimal value="90" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EWX_ExitFlag_9)">
+            <value>
+              <decimal value="91" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EWX_ExitFlag_10)">
+            <value>
+              <decimal value="94" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EWX_ExitFlag_11)">
+            <value>
+              <decimal value="95" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EWX_ExitFlag_12)">
+            <value>
+              <decimal value="99" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+
+    <policy name="String_BackgroundOpacity" class="Both" displayName="$(string.String_BackgroundOpacity)" explainText="$(string.String_BackgroundOpacity_Help)" 
+            presentation="$(presentation.Presentation_BackgroundOpacity)" key="SOFTWARE\GrimAdmin.com\Screensaver Operations">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <decimal id="Decimal_BackgroundOpacity" valueName="BackgroundOpacity" minValue="0" maxValue="100" />
+      </elements>
+    </policy>
+
+    <policy name="String_CancelOnMouseClick" class="Both" displayName="$(string.String_CancelOnMouseClick)" explainText="$(string.String_CancelOnMouseClick_Help)" 
+            key="SOFTWARE\GrimAdmin.com\Screensaver Operations" valueName="CancelOnMouseClick">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+
+    <policy name="String_CancelOnMouseMove" class="Both" displayName="$(string.String_CancelOnMouseMove)" explainText="$(string.String_CancelOnMouseMove_Help)" 
+            key="SOFTWARE\GrimAdmin.com\Screensaver Operations" valueName="CancelOnMouseClick">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+
+    <policy name="String_DelayInSeconds" class="Both" displayName="$(string.String_DelayInSeconds)" explainText="$(string.String_DelayInSeconds_Help)" 
+            presentation="$(presentation.Presentation_DelayInSeconds)" key="SOFTWARE\GrimAdmin.com\Screensaver Operations">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <decimal id="Decimal_DelayInSeconds" valueName="DelayInSeconds" minValue="0" maxValue="2147483647" />
+      </elements>
+    </policy>
+
+    <policy name="String_DisableSpecialKeys" class="Both" displayName="$(string.String_DisableSpecialKeys)" explainText="$(string.String_DisableSpecialKeys_Help)" 
+            key="SOFTWARE\GrimAdmin.com\Screensaver Operations" valueName="DisableSpecialKeys">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+
+    <policy name="String_EasterEgg" class="Both" displayName="$(string.String_EasterEgg)" explainText="$(string.String_EasterEgg_Help)" 
+            presentation="$(presentation.Presentation_EasterEgg)" key="SOFTWARE\GrimAdmin.com\Screensaver Operations">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="TextBox_EasterEgg" valueName="EasterEgg" required="false" maxLength="12" />
+      </elements>
+    </policy>
+
+    <policy name="String_HideActionButton" class="Both" displayName="$(string.String_HideActionButton)" explainText="$(string.String_HideActionButton_Help)" 
+            key="SOFTWARE\GrimAdmin.com\Screensaver Operations" valueName="HideActionButton">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+
+    <policy name="String_RunProcessEnabled" class="Both" displayName="$(string.String_RunProcessEnabled)" explainText="$(string.String_RunProcessEnabled_Help)" 
+            key="SOFTWARE\GrimAdmin.com\Screensaver Operations" valueName="RunProcessEnabled">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+
+    <policy name="String_RunProcessPath" class="Both" displayName="$(string.String_RunProcessPath)" explainText="$(string.String_RunProcessPath_Help)" 
+            presentation="$(presentation.Presentation_RunProcessPath)" key="SOFTWARE\GrimAdmin.com\Screensaver Operations">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="TextBox_RunProcessPath" valueName="RunProcessPath" required="true" maxLength="1023" />
+        <text id="TextBox_RunProcessArguments" valueName="RunProcessArguments" required="false" maxLength="1023" />
+      </elements>
+    </policy>
+
+    <policy name="String_MessageFontSize" class="Both" displayName="$(string.String_MessageFontSize)" explainText="$(string.String_MessageFontSize_Help)" 
+            presentation="$(presentation.Presentation_MessageFontSize)" key="SOFTWARE\GrimAdmin.com\Screensaver Operations">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <decimal id="Decimal_MessageFontSize" valueName="MessageFontSize" minValue="0" maxValue="1638" />
+      </elements>
+    </policy>
+
+    <policy name="String_CustomMessage" class="Both" displayName="$(string.String_CustomMessage)" explainText="$(string.String_CustomMessage_Help)" 
+            presentation="$(presentation.Presentation_CustomMessage)" key="SOFTWARE\GrimAdmin.com\Screensaver Operations">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="TextBox_CustomTitleText" valueName="CustomTitleText" required="false" maxLength="255" />
+        <text id="TextBox_CustomMessage" valueName="CustomMessage" required="false" maxLength="1023"  />
+      </elements>
+    </policy>
+
+    <policy name="String_GradientColor" class="Both" displayName="$(string.String_GradientColor)" explainText="$(string.String_GradientColor_Help)" 
+            presentation="$(presentation.Presentation_GradientColor)" key="SOFTWARE\GrimAdmin.com\Screensaver Operations">
+      <parentCategory ref="String_Cat_ScrOps" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="TextBox_GradientColorLeft" valueName="GradientColorLeft" required="true" maxLength="8"  />
+        <text id="TextBox_GradientColorRight" valueName="GradientColorRight" required="true" maxLength="8"  />
+      </elements>
+    </policy>
+  
+  </policies>
+</policyDefinitions>
