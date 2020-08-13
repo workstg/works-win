@@ -5,7 +5,7 @@
                    revision="1.1" schemaVersion="1.0" >
 
   <policyNamespaces>
-    <target prefix="VisualEffects" namespace="Windows.Policies.VisualEffects" />
+    <target prefix="VisualEffects" namespace="Workstg.Policies.VisualEffects" />
     <using prefix="windows" namespace="Microsoft.Policies.Windows" />
   </policyNamespaces>
   <resources minRequiredRevision="1.0" />

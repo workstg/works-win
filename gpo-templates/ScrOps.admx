@@ -5,7 +5,7 @@
                    revision="1.1" schemaVersion="1.0" >
 
   <policyNamespaces>
-    <target prefix="ScreensaverOperations" namespace="GrimAdmin.Policies.ScreensaverOperations" />
+    <target prefix="ScreensaverOperations" namespace="Workstg.Policies.ScreensaverOperations" />
     <using prefix="windows" namespace="Microsoft.Policies.Windows" />
   </policyNamespaces>
   <resources minRequiredRevision="1.0" />
