@@ -71,10 +71,10 @@ none: イースターエッグは動作しません。</string>
         <dropdownList refId="Presentation_EWX_ExitFlag_List_Item" defaultItem="0" noSort="true">終了時の動作:</dropdownList>
       </presentation>
       <presentation id="Presentation_BackgroundOpacity">
-        <decimalTextBox refId="Decimal_BackgroundOpacity" defaultValue="500" spinStep="100">濃度 (%):</decimalTextBox>
+        <decimalTextBox refId="Decimal_BackgroundOpacity" defaultValue="75" spinStep="1">濃度 (%):</decimalTextBox>
       </presentation>
       <presentation id="Presentation_DelayInSeconds">
-        <decimalTextBox refId="Decimal_DelayInSeconds" defaultValue="500" spinStep="100">待機時間 (秒):</decimalTextBox>
+        <decimalTextBox refId="Decimal_DelayInSeconds" defaultValue="60" spinStep="1">待機時間 (秒):</decimalTextBox>
       </presentation>
       <presentation id="Presentation_EasterEgg">
         <textBox refId="TextBox_EasterEgg">
@@ -93,7 +93,7 @@ none: イースターエッグは動作しません。</string>
         </textBox>
       </presentation>
       <presentation id="Presentation_MessageFontSize">
-        <decimalTextBox refId="Decimal_MessageFontSize" defaultValue="1" spinStep="1638">フォントサイズ:</decimalTextBox>
+        <decimalTextBox refId="Decimal_MessageFontSize" defaultValue="9" spinStep="1">フォントサイズ:</decimalTextBox>
       </presentation>
       <presentation id="Presentation_CustomMessage">
         <textBox refId="TextBox_CustomTitleText">
