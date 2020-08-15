@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinition"
+                   revision="1.1" schemaVersion="1.0" >
+
+  <policyNamespaces>
+    <target prefix="ShutdowStability" namespace="Workstg.Policies.ShutdowStability" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+
+  <categories>
+    <category name="String_Cat_ShutdowStability" displayName="$(string.String_Cat_ShutdowStability)" explainText="$(string.String_Cat_ShutdowStability)" />
+  </categories>
+
+  <policies>
+    <policy name="String_WaitToKillServiceTimeout" class="Machine" displayName="$(string.String_WaitToKillServiceTimeout)" explainText="$(string.String_WaitToKillServiceTimeout_Help)" 
+            presentation="$(presentation.Presentation_WaitToKillServiceTimeout)" key="SYSTEM\CurrentControlSet\Control">
+      <parentCategory ref="String_Cat_ShutdowStability" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="TextBox_WaitToKillServiceTimeout" valueName="WaitToKillServiceTimeout" required="true" maxLength="12"  />
+      </elements>
+    </policy>
+
+    <policy name="String_AutoEndTasks" class="User" displayName="$(string.String_AutoEndTasks)" explainText="$(string.String_AutoEndTasks_Help)" 
+            key="Control Panel\Desktop" valueName="AutoEndTasks">
+      <parentCategory ref="String_Cat_ShutdowStability" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+
+    <policy name="String_HungAppTimeout" class="User" displayName="$(string.String_HungAppTimeout)" explainText="$(string.String_HungAppTimeout_Help)" 
+            presentation="$(presentation.Presentation_HungAppTimeout)" key="Control Panel\Desktop">
+      <parentCategory ref="String_Cat_ShutdowStability" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="TextBox_HungAppTimeout" valueName="HungAppTimeout" required="true" maxLength="12"  />
+      </elements>
+    </policy>
+
+    <policy name="String_WaitToKillAppTimeout" class="User" displayName="$(string.String_WaitToKillAppTimeout)" explainText="$(string.String_WaitToKillAppTimeout_Help)" 
+            presentation="$(presentation.Presentation_WaitToKillAppTimeout)" key="Control Panel\Desktop">
+      <parentCategory ref="String_Cat_ShutdowStability" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="TextBox_WaitToKillAppTimeout" valueName="WaitToKillAppTimeout" required="true" maxLength="12"  />
+      </elements>
+    </policy>
+  </policies>
+</policyDefinitions>

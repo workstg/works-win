@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                           xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinition" 
+                           revision="1.0" schemaVersion="1.0">
+  <displayName >ここに表示名を入力</displayName>
+  <description >ADMX ファイルの説明を入力</description>
+  <resources>
+    <stringTable>
+      <string id="String_Cat_ShutdowStability">Windows 終了処理の最適化</string>
+      <string id="String_WaitToKillServiceTimeout">サービス終了の待ち時間</string>
+      <string id="String_WaitToKillServiceTimeout_Help">シャットダウン実行時にサービスの終了を待つ時間をミリ秒単位で設定します。この時間内に終了しなかったサービスは強制終了されます。既定値は20000です。</string>
+      <string id="String_AutoEndTasks">アプリケーションの自動終了</string>
+      <string id="String_AutoEndTasks_Help">有効にした場合、シャットダウン実行時に起動中のデスクトップアプリケーションを自動的に終了します。変更が保存されていない場合は失われることに注意してください。
+無効または未構成の場合はアプリケーションによってユーザーの応答を待つ場合があります。</string>
+      <string id="String_HungAppTimeout">応答なしまでの時間</string>
+      <string id="String_HungAppTimeout_Help">アプリケーションの処理中に応答なしと判断されるまでの待ち時間をミリ秒単位で設定します。既定値は5000です。</string>
+      <string id="String_WaitToKillAppTimeout">ユーザープロセス終了の待ち時間</string>
+      <string id="String_WaitToKillAppTimeout_Help">シャットダウン実行時にユーザープロセスの終了を待つ時間をミリ秒単位で設定します。この時間内に終了しなかったプロセスはユーザーに通知されます。
+ただし、「アプリケーションの自動終了」が有効になっている場合はユーザーに通知せずに終了します。既定値は20000です。</string>
+    </stringTable>
+
+    <presentationTable>
+      <presentation id="Presentation_WaitToKillServiceTimeout">
+        <textBox refId="TextBox_WaitToKillServiceTimeout">
+          <label>待機時間 (ミリ秒):</label>
+          <defaultValue>20000</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Presentation_HungAppTimeout">
+        <textBox refId="TextBox_HungAppTimeout">
+          <label>待機時間 (ミリ秒):</label>
+          <defaultValue>5000</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Presentation_WaitToKillAppTimeout">
+        <textBox refId="TextBox_WaitToKillAppTimeout">
+          <label>待機時間 (ミリ秒):</label>
+          <defaultValue>20000</defaultValue>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
