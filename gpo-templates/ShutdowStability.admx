@@ -18,7 +18,7 @@
     <policy name="String_WaitToKillServiceTimeout" class="Machine" displayName="$(string.String_WaitToKillServiceTimeout)" explainText="$(string.String_WaitToKillServiceTimeout_Help)" 
             presentation="$(presentation.Presentation_WaitToKillServiceTimeout)" key="SYSTEM\CurrentControlSet\Control">
       <parentCategory ref="String_Cat_ShutdowStability" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <elements>
         <text id="TextBox_WaitToKillServiceTimeout" valueName="WaitToKillServiceTimeout" required="true" maxLength="12"  />
       </elements>
@@ -27,7 +27,7 @@
     <policy name="String_AutoEndTasks" class="User" displayName="$(string.String_AutoEndTasks)" explainText="$(string.String_AutoEndTasks_Help)" 
             key="Control Panel\Desktop" valueName="AutoEndTasks">
       <parentCategory ref="String_Cat_ShutdowStability" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <enabledValue>
         <string>1</string>
       </enabledValue>
@@ -39,7 +39,7 @@
     <policy name="String_HungAppTimeout" class="User" displayName="$(string.String_HungAppTimeout)" explainText="$(string.String_HungAppTimeout_Help)" 
             presentation="$(presentation.Presentation_HungAppTimeout)" key="Control Panel\Desktop">
       <parentCategory ref="String_Cat_ShutdowStability" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <elements>
         <text id="TextBox_HungAppTimeout" valueName="HungAppTimeout" required="true" maxLength="12"  />
       </elements>
@@ -48,7 +48,7 @@
     <policy name="String_WaitToKillAppTimeout" class="User" displayName="$(string.String_WaitToKillAppTimeout)" explainText="$(string.String_WaitToKillAppTimeout_Help)" 
             presentation="$(presentation.Presentation_WaitToKillAppTimeout)" key="Control Panel\Desktop">
       <parentCategory ref="String_Cat_ShutdowStability" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <elements>
         <text id="TextBox_WaitToKillAppTimeout" valueName="WaitToKillAppTimeout" required="true" maxLength="12"  />
       </elements>

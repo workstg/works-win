@@ -18,7 +18,7 @@
     <policy name="String_Pref_Perf" class="User" displayName="$(string.String_Pref_Perf)" explainText="$(string.String_Pref_Perf_Help)" 
             presentation="$(presentation.Presentation_Pref_Perf_List)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <elements>
         <enum id="Presentation_Pref_Perf_List_Item" valueName="VisualFXSetting" required="true">
           <item displayName="$(string.String_Pref_Perf_0)">
@@ -48,7 +48,7 @@
     <policy name="String_UserPreferencesMask" class="User" displayName="$(string.String_UserPreferencesMask)" explainText="$(string.String_UserPreferencesMask_Help)" 
             presentation="$(presentation.Presentation_UserPreferencesMask_List)" key="Control Panel\Desktop">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <elements>
         <enum id="Presentation_UserPreferencesMask_List_Item" valueName="UserPreferencesMask" required="true">
           <item displayName="$(string.String_UserPreferencesMask_0)">
@@ -73,7 +73,7 @@
     <policy name="String_FontSmoothing" class="User" displayName="$(string.String_FontSmoothing)" explainText="$(string.String_FontSmoothing_Help)" 
             key="Control Panel\Desktop" valueName="FontSmoothing">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <enabledValue>
         <string>0</string>
       </enabledValue>
@@ -85,7 +85,7 @@
     <policy name="String_DragFullWindows" class="User" displayName="$(string.String_DragFullWindows)" explainText="$(string.String_DragFullWindows_Help)" 
             key="Control Panel\Desktop" valueName="DragFullWindows">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <enabledValue>
         <string>0</string>
       </enabledValue>
@@ -97,7 +97,7 @@
     <policy name="String_MinAnimate" class="User" displayName="$(string.String_MinAnimate)" explainText="$(string.String_MinAnimate_Help)" 
             key="Control Panel\Desktop\WindowMetrics" valueName="MinAnimate">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <enabledValue>
         <string>0</string>
       </enabledValue>
@@ -109,7 +109,7 @@
     <policy name="String_IconsOnly" class="User" displayName="$(string.String_IconsOnly)" explainText="$(string.String_IconsOnly_Help)" 
             key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="IconsOnly">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -121,7 +121,7 @@
     <policy name="String_TaskbarAnimations" class="User" displayName="$(string.String_TaskbarAnimations)" explainText="$(string.String_TaskbarAnimations_Help)" 
             key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="TaskbarAnimations">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <enabledValue>
         <decimal value="0" />
       </enabledValue>
@@ -133,7 +133,7 @@
     <policy name="String_ListviewShadow" class="User" displayName="$(string.String_ListviewShadow)" explainText="$(string.String_ListviewShadow_Help)" 
             key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="ListviewShadow">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <enabledValue>
         <decimal value="0" />
       </enabledValue>
@@ -145,7 +145,7 @@
     <policy name="String_ListviewAlphaSelect" class="User" displayName="$(string.String_ListviewAlphaSelect)" explainText="$(string.String_ListviewAlphaSelect_Help)" 
             key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="ListviewAlphaSelect">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <enabledValue>
         <decimal value="0" />
       </enabledValue>
@@ -157,7 +157,7 @@
     <policy name="String_ThemeActive" class="User" displayName="$(string.String_ThemeActive)" explainText="$(string.String_ThemeActive_Help)" 
             key="Software\Microsoft\Windows\CurrentVersion\ThemeManager" valueName="ThemeActive">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <enabledValue>
         <string>0</string>
       </enabledValue>
@@ -169,7 +169,7 @@
     <policy name="String_EnableAeroPeek" class="User" displayName="$(string.String_EnableAeroPeek)" explainText="$(string.String_EnableAeroPeek_Help)" 
             key="Software\Microsoft\Windows\DWM" valueName="EnableAeroPeek">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <enabledValue>
         <decimal value="0" />
       </enabledValue>
@@ -181,7 +181,7 @@
     <policy name="String_AlwaysHibernateThumbnails" class="User" displayName="$(string.String_AlwaysHibernateThumbnails)" explainText="$(string.String_AlwaysHibernateThumbnails_Help)" 
             key="Software\Microsoft\Windows\DWM" valueName="AlwaysHibernateThumbnails">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <enabledValue>
         <decimal value="0" />
       </enabledValue>
@@ -193,7 +193,7 @@
     <policy name="String_CompositionPolicy" class="User" displayName="$(string.String_CompositionPolicy)" explainText="$(string.String_CompositionPolicy_Help)" 
             key="Software\Microsoft\Windows\DWM" valueName="CompositionPolicy">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <enabledValue>
         <decimal value="0" />
       </enabledValue>
@@ -205,7 +205,7 @@
     <policy name="String_ColorizationOpaqueBlend" class="User" displayName="$(string.String_ColorizationOpaqueBlend)" explainText="$(string.String_ColorizationOpaqueBlend_Help)" 
             key="Software\Microsoft\Windows\DWM" valueName="ColorizationOpaqueBlend">
       <parentCategory ref="String_Cat_VisualEffects" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
       <enabledValue>
         <decimal value="0" />
       </enabledValue>
