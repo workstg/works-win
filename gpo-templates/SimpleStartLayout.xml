@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LayoutModificationTemplate xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout"
+                            xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout"
+                            xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification"
+                            Version="1">
+  <LayoutOptions StartTileGroupCellWidth="6" />
+  <DefaultLayoutOverride>
+    <StartLayoutCollection>
+      <defaultlayout:StartLayout GroupCellWidth="6" />
+    </StartLayoutCollection>
+  </DefaultLayoutOverride>
+</LayoutModificationTemplate>
