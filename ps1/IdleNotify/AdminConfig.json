@@ -1,0 +1,16 @@
+{
+   "timeout":{
+      "minutes": 1
+   },
+   "mail": {
+      "smtp": "smtp.example.com",
+      "port": 25,
+      "from": "admin@example.com",
+      "auth": {
+         "enabled": 0,
+         "user": "user",
+         "password": "password",
+         "ssl": 0
+      }
+   }
+}
