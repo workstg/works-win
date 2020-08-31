@@ -33,6 +33,6 @@ Install
 - mail.auth.password : SMTP認証パスワード
 - mail.auth.ssl : "0"の場合はSSL暗号化を無効
 
-"mailaddress.txt"ファイルは1行目に通知先のメールアドレスを入力 (2行目移行は無視されます)  
+"mailaddress.txt"ファイルは1行目に通知先のメールアドレスを入力 (2行目以降は無視されます)  
 
 メールの送信に失敗すると、実行ユーザーのホームに"warn.log"ファイルが作成され、エラーメッセージを保存する
