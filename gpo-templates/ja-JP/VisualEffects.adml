@@ -8,6 +8,7 @@
   <resources>
     <stringTable>
       <string id="String_Cat_VisualEffects">Windows 視覚効果</string>
+      <string id="String_Cat_Win10Personal">Windows 10 個人用設定</string>
       <string id="String_Pref_Perf">視覚効果を設定する</string>
       <string id="String_Pref_Perf_Help">「システムの詳細設定」で視覚効果を設定します。ただし、実際に反映するには詳細項目の設定が必要です。
 元に戻す場合はこのカテゴリーの項目を全て「未構成」に設定し、各ユーザーで視覚効果を設定してください。</string>
@@ -56,6 +57,8 @@
       <string id="String_ColorizationOpaqueBlend">透明感を無効化</string>
       <string id="String_ColorizationOpaqueBlend_Help">「透明感を有効にする」を無効にします。
 (Windows 10 では非サポート)</string>
+      <string id="String_EnableTransparency">スタートメニュー、タスクバー、アクションセンターの半透明を無効化</string>
+      <string id="String_EnableTransparency_Help">Windows 10のスタートメニュー、タスクバー、アクションセンターの半透明効果を無効にします。この設定は個人用設定で「半透明効果」を無効にするのと同等です。</string>
     </stringTable>
 
     <presentationTable>

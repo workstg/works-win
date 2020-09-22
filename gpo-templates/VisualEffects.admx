@@ -12,6 +12,9 @@
 
   <categories>
     <category name="String_Cat_VisualEffects" displayName="$(string.String_Cat_VisualEffects)" explainText="$(string.String_Cat_VisualEffects)" />
+    <category name="String_Cat_Win10Personal" displayName="$(string.String_Cat_Win10Personal)" key="Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" >
+			<parentCategory ref="String_Cat_VisualEffects" />
+    </category>
   </categories>
 
   <policies>
@@ -206,6 +209,18 @@
             key="Software\Microsoft\Windows\DWM" valueName="ColorizationOpaqueBlend">
       <parentCategory ref="String_Cat_VisualEffects" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+
+    <policy name="String_EnableTransparency" class="User" displayName="$(string.String_EnableTransparency)" explainText="$(string.String_EnableTransparency_Help)" 
+            key="Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" valueName="EnableTransparency">
+      <parentCategory ref="String_Cat_Win10Personal" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
       <enabledValue>
         <decimal value="0" />
       </enabledValue>
