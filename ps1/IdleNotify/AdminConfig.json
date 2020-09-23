@@ -6,6 +6,7 @@
       "smtp": "smtp.example.com",
       "port": 25,
       "from": "admin@example.com",
+      "bcc": "",
       "auth": {
          "enabled": 0,
          "user": "user",

@@ -106,6 +106,9 @@ do {
       }
       $MailSubject = Encode-MailSubject(Encode-MailSubject($MailSubject))
       $MailMassage = New-Object Net.Mail.MailMessage($Config.mail.from, $MailTo, $MailSubject, $MailBody)
+      if (-Not([String]::IsNullOrEmpty($Config.mail.bcc))) {
+         $MailMassage.Bcc.Add($Config.mail.bcc)
+      }
       $MailMassage.BodyEncoding = [System.Text.Encoding]::GetEncoding("ISO-2022-JP")
       try {
          $SmtpClient.Send($MailMassage)
