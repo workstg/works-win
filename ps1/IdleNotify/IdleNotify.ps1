@@ -6,6 +6,7 @@ $AdminConfig = $PSScriptRoot + "\AdminConfig.json"
 $MailFile = $PSScriptRoot + "\mail.txt"
 $UserConfig = $Home + "\mailaddress.txt"
 $WarnOutput = $Home + "\warn.log"
+$LogoffFlag = $env:LocalAppData + "\Temp\logoffnotify.tmp"
 
 if (Test-Path $AdminConfig) {
    $Config = Get-Content $AdminConfig -Raw | ConvertFrom-Json
@@ -115,7 +116,20 @@ do {
       } catch {
          $_.Exception.Message | Set-Content $WarnOutput
       }
+      New-Item -Path $LogoffFlag -Force | Out-Null
       break
    }
 } while ($IdleTime -gt $Interval)
+
+try {
+   do {
+      if (! (Test-Path $LogoffFlag)) {
+         break
+      }
+      Start-Sleep -Seconds $IntervalSec
+      $IdleTime = [PInvoke.Win32.UserInput]::IdleTime
+   } while ($IdleTime -gt $Interval)
+} finally {
+   Remove-Item -Path $LogoffFlag -Force
+}
 exit
