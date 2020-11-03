@@ -35,12 +35,12 @@ if (Test-Path $LogoffFlag) {
       exit 8
    }
 
-# for .NET 4.5 support
-function Encode-MailSubject($Subject) {
-   $Encode = [System.Text.Encoding]::GetEncoding("ISO-2022-JP")
-   $Base64 = [Convert]::ToBase64String($Encode.GetBytes($Subject))
-   "=?{0}?B?{1}?=" -f "iso-2022-jp", $Base64
-}
+   # for .NET 4.5 support
+   function Encode-MailSubject($Subject) {
+      $Encode = [System.Text.Encoding]::GetEncoding("ISO-2022-JP")
+      $Base64 = [Convert]::ToBase64String($Encode.GetBytes($Subject))
+      "=?{0}?B?{1}?=" -f "iso-2022-jp", $Base64
+   }
 
    # Main Routine
    $SmtpClient = New-Object Net.Mail.SmtpClient($Config.mail.smtp, $Config.mail.port)
