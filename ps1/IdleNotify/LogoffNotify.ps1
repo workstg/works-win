@@ -61,6 +61,8 @@ if (Test-Path $LogoffFlag) {
       $SmtpClient.Send($MailMassage)
    } catch {
       $_.Exception.Message | Set-Content $WarnOutput
+   } finally {
+      Remove-Item -Path $LogoffFlag -Force
    }
 }
 exit
