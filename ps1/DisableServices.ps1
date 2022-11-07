@@ -47,7 +47,7 @@ $TargetServices = (
 )
 
 $ErrorActionPreference = "silentlycontinue"
-echo "以下のサービスの自動起動を無効にしました。"　---
+echo "以下のサービスの自動起動を無効にしました。"
 foreach ($ServiceName in $TargetServices) {
    if ($Service = Get-Service -Name $ServiceName) {
       if (-Not ($Service.StartType -eq "Disabled")) {
