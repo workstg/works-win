@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                           xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinition" 
+                           revision="1.0" schemaVersion="1.0">
+  <displayName >ここに表示名を入力</displayName>
+  <description >ADMX ファイルの説明を入力</description>
+  <resources>
+    <stringTable>
+      <string id="String_Cat_DesktopOptions">デスクトップ用オプション</string>
+      <string id="String_ServicesPipeTimeout">サービス起動のタイムアウト</string>
+      <string id="String_ServicesPipeTimeout_Help">サービスコントロールマネージャーのタイムアウト値を設定します。この時間内にサービスが起動しない場合、イベントID 7000 や 7011 が記録されます。既定値は"30000"です。</string>
+      <string id="String_EnablePrefetcher">プリフェッチの設定</string>
+      <string id="String_EnablePrefetcher_Help">プリフェッチ機能の動作を設定します。無効にする場合はSysMainサービスも無効化することを推奨します。既定値は"全て有効"です。</string>
+      <string id="String_EnablePrefetcher_0">無効</string>
+      <string id="String_EnablePrefetcher_1">アプリケーションのみ有効</string>
+      <string id="String_EnablePrefetcher_2">システムのみ有効</string>
+      <string id="String_EnablePrefetcher_3">全て有効</string>
+      <string id="String_EnableSuperfetch">Superfetchの設定</string>
+      <string id="String_EnableSuperfetch_Help">Superfetch機能の動作を設定します。無効にする場合はSysMainサービスも無効化することを推奨します。既定値は"全て有効"です。</string>
+      <string id="String_EnableSuperfetch_0">無効</string>
+      <string id="String_EnableSuperfetch_1">アプリケーションのみ有効</string>
+      <string id="String_EnableSuperfetch_2">システムのみ有効</string>
+      <string id="String_EnableSuperfetch_3">全て有効</string>
+      <string id="String_TimeOutValue">ディスクタイムアウト</string>
+      <string id="String_TimeOutValue_Help">ディスクアクセスのタイムアウト値を設定します。ストレージやホストバスアダプター等の製造元から指示がある場合はそれに従ってください。既定値は"10"です。</string>
+    </stringTable>
+
+    <presentationTable>
+      <presentation id="Presentation_ServicesPipeTimeout">
+        <decimalTextBox refId="Decimal_ServicesPipeTimeout" defaultValue="30000" spinStep="1">タイムアウト値 (ミリ秒):</decimalTextBox>
+      </presentation>
+      <presentation id="Presentation_EnablePrefetcher_List">
+        <dropdownList refId="Presentation_EnablePrefetcher_List_Item" defaultItem="3" noSort="true">プリフェッチの動作:</dropdownList>
+      </presentation>
+      <presentation id="Presentation_EnableSuperfetch_List">
+        <dropdownList refId="Presentation_EnableSuperfetch_List_Item" defaultItem="3" noSort="true">Superfetchの動作:</dropdownList>
+      </presentation>
+      <presentation id="Presentation_TimeOutValue">
+        <decimalTextBox refId="Decimal_TimeOutValue" defaultValue="30000" spinStep="1">タイムアウト値 (秒):</decimalTextBox>
+      </presentation>  
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

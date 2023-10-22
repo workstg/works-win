@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinition"
+                   revision="1.1" schemaVersion="1.0" >
+
+  <policyNamespaces>
+    <target prefix="DesktopOptions" namespace="Workstg.Policies.DesktopOptions" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+
+  <categories>
+    <category name="String_Cat_DesktopOptions" displayName="$(string.String_Cat_DesktopOptions)" explainText="$(string.String_Cat_DesktopOptions)" />
+  </categories>
+
+  <policies>
+    <policy name="String_ServicesPipeTimeout" class="Machine" displayName="$(string.String_ServicesPipeTimeout)" explainText="$(string.String_ServicesPipeTimeout_Help)" 
+            presentation="$(presentation.Presentation_ServicesPipeTimeout)" key="SYSTEM\CurrentControlSet\Control">
+      <parentCategory ref="String_Cat_DesktopOptions" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <elements>
+        <decimal id="Decimal_ServicesPipeTimeout" valueName="ServicesPipeTimeout" minValue="0" maxValue="2147483647" />
+      </elements>
+    </policy>
+
+    <policy name="String_EnablePrefetcher" class="Machine" displayName="$(string.String_EnablePrefetcher)" explainText="$(string.String_EnablePrefetcher_Help)" 
+            presentation="$(presentation.Presentation_EnablePrefetcher_List)" key="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters">
+      <parentCategory ref="String_Cat_DesktopOptions" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <elements>
+        <enum id="Presentation_EnablePrefetcher_List_Item" valueName="EnablePrefetcher" required="true">
+          <item displayName="$(string.String_EnablePrefetcher_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EnablePrefetcher_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EnablePrefetcher_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EnablePrefetcher_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+
+    <policy name="String_EnableSuperfetch" class="Machine" displayName="$(string.String_EnableSuperfetch)" explainText="$(string.String_EnableSuperfetch_Help)" 
+            presentation="$(presentation.Presentation_EnableSuperfetch_List)" key="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters">
+      <parentCategory ref="String_Cat_DesktopOptions" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <elements>
+        <enum id="Presentation_EnableSuperfetch_List_Item" valueName="EnableSuperfetch" required="true">
+          <item displayName="$(string.String_EnableSuperfetch_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EnableSuperfetch_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EnableSuperfetch_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.String_EnableSuperfetch_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="String_TimeOutValue" class="Machine" displayName="$(string.String_TimeOutValue)" explainText="$(string.String_TimeOutValue_Help)" 
+            presentation="$(presentation.Presentation_TimeOutValue)" key="SYSTEM\CurrentControlSet\Services\Disk">
+      <parentCategory ref="String_Cat_DesktopOptions" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <elements>
+        <decimal id="Decimal_TimeOutValue" valueName="TimeOutValue" minValue="1" maxValue="255" />
+      </elements>
+    </policy>
+
+  </policies>
+</policyDefinitions>
