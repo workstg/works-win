@@ -8,7 +8,8 @@ if (! (Test-Path -LiteralPath $RegPath)) {
    Write-Output "Microsoft 365 Apps is not installed!"
    exit
 }
-If ($DisableWam) {
+
+if ($DisableWam) {
    $IdentityProperty = Get-ItemProperty -LiteralPath $RegPath
    foreach ($RegName in $RegList) {
       if ($null -ne $IdentityProperty.$RegName) {
