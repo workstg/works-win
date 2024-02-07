@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinition"
+                   revision="1.1" schemaVersion="1.0" >
+
+  <policyNamespaces>
+    <target prefix="NvGridLicensing" namespace="Workstg.Policies.NvGridLicensing" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+
+  <categories>
+    <category name="String_Cat_NvGridLicensing" displayName="$(string.String_Cat_NvGridLicensing)" explainText="$(string.String_Cat_NvGridLicensing)" />
+  </categories>
+
+  <policies>
+    <policy name="String_FeatureType" class="Machine" displayName="$(string.String_FeatureType)" explainText="$(string.String_FeatureType_Help)" 
+            presentation="$(presentation.Presentation_FeatureType_List)" key="SYSTEM\CurrentControlSet\Services\nvlddmkm\Global\GridLicensing">
+      <parentCategory ref="String_Cat_NvGridLicensing" />
+      <supportedOn ref="windows:SUPPORTED_Windows10" />
+      <elements>
+        <enum id="Presentation_FeatureType_List_Item" valueName="FeatureType" required="true">
+          <item displayName="$(string.String_FeatureType_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.String_FeatureType_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+  
+    <policy name="String_LicenseInterval" class="Machine" displayName="$(string.String_LicenseInterval)" explainText="$(string.String_LicenseInterval_Help)" 
+            presentation="$(presentation.Presentation_LicenseInterval)" key="SYSTEM\CurrentControlSet\Services\nvlddmkm\Global\GridLicensing">
+      <parentCategory ref="String_Cat_NvGridLicensing" />
+      <supportedOn ref="windows:SUPPORTED_Windows10" />
+      <elements>
+        <decimal id="Decimal_LicenseInterval" valueName="LicenseInterval" minValue="10" maxValue="10080" />
+      </elements>
+    </policy>
+
+    <policy name="String_DisableExpirationPopups" class="Machine" displayName="$(string.String_DisableExpirationPopups)" explainText="$(string.String_DisableExpirationPopups_Help)" 
+            key="SYSTEM\CurrentControlSet\Services\nvlddmkm\Global\GridLicensing" valueName="DisableExpirationPopups">
+      <parentCategory ref="String_Cat_NvGridLicensing" />
+      <supportedOn ref="windows:SUPPORTED_Windows10" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+
+    <policy name="String_DisableSpecificPopups" class="Machine" displayName="$(string.String_DisableSpecificPopups)" explainText="$(string.String_DisableSpecificPopups_Help)" 
+            key="SYSTEM\CurrentControlSet\Services\nvlddmkm\Global\GridLicensing" valueName="DisableSpecificPopups">
+      <parentCategory ref="String_Cat_NvGridLicensing" />
+      <supportedOn ref="windows:SUPPORTED_Windows10" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+
+    <policy name="String_EnableLogging" class="Machine" displayName="$(string.String_EnableLogging)" explainText="$(string.String_EnableLogging_Help)" 
+            key="SYSTEM\CurrentControlSet\Services\nvlddmkm\Global\GridLicensing" valueName="EnableLogging">
+      <parentCategory ref="String_Cat_NvGridLicensing" />
+      <supportedOn ref="windows:SUPPORTED_Windows10" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+
+    <policy name="String_LicenseHostId" class="Machine" displayName="$(string.String_LicenseHostId)" explainText="$(string.String_LicenseHostId_Help)" 
+            presentation="$(presentation.Presentation_LicenseHostId)" key="SYSTEM\CurrentControlSet\Services\nvlddmkm\Global\GridLicensing">
+      <parentCategory ref="String_Cat_NvGridLicensing" />
+      <supportedOn ref="windows:SUPPORTED_Windows10" />
+      <elements>
+        <text id="TextBox_LicenseHostId" valueName="LicenseHostId" required="true" maxLength="16" />
+      </elements>
+    </policy>
+
+    <policy name="String_ClientConfigTokenPath" class="Machine" displayName="$(string.String_ClientConfigTokenPath)" explainText="$(string.String_ClientConfigTokenPath_Help)" 
+            presentation="$(presentation.Presentation_ClientConfigTokenPath)" key="SYSTEM\CurrentControlSet\Services\nvlddmkm\Global\GridLicensing">
+      <parentCategory ref="String_Cat_NvGridLicensing" />
+      <supportedOn ref="windows:SUPPORTED_Windows10" />
+      <elements>
+        <text id="TextBox_ClientConfigTokenPath" valueName="ClientConfigTokenPath" required="true" maxLength="255" />
+      </elements>
+    </policy>
+
+    <policy name="String_ProxyServerAddress" class="Machine" displayName="$(string.String_ProxyServerAddress)" explainText="$(string.String_ProxyServerAddress_Help)" 
+            presentation="$(presentation.Presentation_ProxyServerAddress)" key="SYSTEM\CurrentControlSet\Services\nvlddmkm\Global\GridLicensing">
+      <parentCategory ref="String_Cat_NvGridLicensing" />
+      <supportedOn ref="windows:SUPPORTED_Windows10" />
+      <elements>
+        <text id="TextBox_ProxyServerAddress" valueName="ProxyServerAddress" required="true" maxLength="255" />
+        <text id="TextBox_ProxyServerPort" valueName="ProxyServerPort" required="true" maxLength="16" />
+      </elements>
+    </policy>
+  </policies>
+</policyDefinitions>

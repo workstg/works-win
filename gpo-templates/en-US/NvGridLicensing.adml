@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                           xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinition" 
+                           revision="1.0" schemaVersion="1.0">
+  <displayName>Display Name</displayName>
+  <description>Description</description>
+  <resources>
+    <stringTable>
+      <string id="String_Cat_NvGridLicensing">NVIDIA vGPU Software Licensing</string>
+      <string id="String_FeatureType">Feature Type</string>
+      <string id="String_FeatureType_Help">The feature type of a GPU in pass-through mode or a bare-metal deployment
+
+Do not change the value of this registry key in a VM configured with NVIDIA vGPU.</string>
+      <string id="String_FeatureType_0">vApps</string>
+      <string id="String_FeatureType_2">vWS</string>
+      <string id="String_LicenseInterval">License Interval</string>
+      <string id="String_LicenseInterval_Help">An integer in the range 10-10080 that specifies the period of time in minutes for which a license can be borrowed after it is checked out
+
+After this period has elapsed, the client must obtain a new license from the server.
+The default is 1440 minutes, which corresponds to a period of 1 day.</string>
+      <string id="String_DisableExpirationPopups">Disable Expiration pop-up notifications</string>
+      <string id="String_DisableExpirationPopups_Help">Disable license expiration pop-up notifications
+(Optional: defaults to enabled)</string>
+      <string id="String_DisableSpecificPopups">Disable Specific pop-up notifications</string>
+      <string id="String_DisableSpecificPopups_Help">Disable pop-up notifications for changes to the following license states:
+  - Requesting license
+  - License acquired
+  - License renewal failed
+(Optional: defaults to enabled)</string>
+      <string id="String_EnableLogging">Enable Logging</string>
+      <string id="String_EnableLogging_Help">Enable logging of significant licensing events
+(Optional: defaults to enabled)</string>
+      <string id="String_LicenseHostId">License Host ID</string>
+      <string id="String_LicenseHostId_Help">If this registry key is absent, the license server selects the first valid MAC address it finds to identify the VM for license checkouts.
+
+When present, this registry key must be the MAC address of the network interface controller (NIC) on the VM that the license server will use to identify the VM for license checkouts. Specify only the numbers and letters in the address without any spaces or punctuation, for example, "00005E0053FF".
+
+Setting this registry key prevents two license checkouts by a single VM if the VM is shut down abruptly and then restarted after a change to its network configuration.</string>
+      <string id="String_ClientConfigTokenPath">Client Config Token Path</string>
+      <string id="String_ClientConfigTokenPath_Help">The full path to the folder in which you want to store the client configuration token for the client.
+
+Set this registry key only if you want store the client configuration token in a custom location.
+(Optional: default to "%SystemDrive%:\Program Files\NVIDIA Corporation\vGPU Licensing\ClientConfigToken")</string>
+      <string id="String_ProxyServerAddress">Proxy Server Settings</string>
+      <string id="String_ProxyServerAddress_Help">Set this registry key only if a non-transparent proxy server is configured between your licensed client and a CLS instance.</string>
+    </stringTable>
+
+    <presentationTable>
+      <presentation id="Presentation_FeatureType_List">
+        <dropdownList refId="Presentation_FeatureType_List_Item" defaultItem="0" noSort="true">Type:</dropdownList>
+      </presentation>
+      <presentation id="Presentation_LicenseInterval">
+        <decimalTextBox refId="Decimal_LicenseInterval" defaultValue="1440" spinStep="1">Interval (minutes):</decimalTextBox>
+      </presentation>
+      <presentation id="Presentation_LicenseHostId">
+        <textBox refId="TextBox_LicenseHostId">
+          <label>MAC address:</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Presentation_ClientConfigTokenPath">
+        <textBox refId="TextBox_ClientConfigTokenPath">
+          <label>Token folder path:</label>
+          <defaultValue>C:\Program Files\NVIDIA Corporation\vGPU Licensing\ClientConfigToken</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Presentation_ProxyServerAddress">
+        <textBox refId="TextBox_ProxyServerAddress">
+          <label>Address:</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="TextBox_ProxyServerPort">
+          <label>Port:</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
